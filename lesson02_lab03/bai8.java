@@ -1,38 +1,25 @@
-package Lesson01;
+package demo;
 
 import java.util.Scanner;
 
 public class bai8 {
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("nhap tháng : ");
-        int thang=sc.nextInt();
-        System.out.println("nhập năm : ");
-        int nam=sc.nextInt();
-        switch (thang){
-            case 1,3,5,7,8,10,12:
-                System.out.println("tháng có 30 ngày");
-                break;
-            case 4,6,9,11:
-                System.out.println("tháng có 31 ngày ");
-                break;
-            case 2:
-                if(nam%4==0 && nam%100!=0 ){
-                    System.out.println(" là năm nhuận có 29 ngày");
-
-                }else if(nam%100==0 && nam%400!=0){
-                    System.out.println("không phải là năm nhuận có 28 ngày ");
-
-                }else if(nam%100==0 && nam%400==0){
-                    System.out.println("là năm nhuận có 29 ngày ");
-
-                }
-                break;
-            default:
-                System.out.println("nhập lại tháng");
-                break;
+    void CauA(int n){
+        int giaithua=1;
+        for(int i=1;i<=n;i++){
+            giaithua=giaithua*i;
         }
+        System.out.print("kết quả: " +giaithua);
+    }
 
-
+    public static void main(String[] args) {
+       bai8 b = new bai8();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("nhap n = ");
+        int n=sc.nextInt();
+        if (n>0){
+            b.CauA(n);
+        }else{
+            System.out.println("nhap lại n");
+        }
     }
 }

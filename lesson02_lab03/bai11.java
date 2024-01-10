@@ -1,50 +1,28 @@
-package Lesson01;
+package demo;
 
 import java.util.Scanner;
 
 public class bai11 {
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("nhap a: ");
-        float a=sc.nextFloat();
-        System.out.println("nhập b: ");
-        float b=sc.nextFloat();
-        while (true){
-            System.out.println("Nhập toán tử +,-,*,/ ");
-            char kiTu=sc.next().charAt(0);
-            switch (kiTu){
-                case '+':
-                    System.out.println("kết quả là: " +(a+b));
-                    break;
-                case '-':
-                    System.out.println("kết quả là: " +(a-b));
-                    break;
-                case '*':
-                    System.out.println("kết quả là: " +(a*b));
-                    break;
-                case '/':
-                    if(b>0){
-                        System.out.println("kết quả là: " +(a/b));
-                    }else{
-                        System.out.println("kết quả là: Không chia được ");
-                    }
-                    break;
-                default:
-                    System.out.println("Nhập sai kí tự.");
-                    break;
-            }
 
-            System.out.println("----------------------------------");
-            System.out.println("Bạn có muốn tiếp tục nữa không ");
-            System.out.println("1.có");
-            System.out.println("2.không");
-            int choi=sc.nextInt();
-            if(choi==1){
-                continue;
+    static boolean kiemTra(int n){
+        int sum = 0;
+        for (int i = 1; i < n; i++) {
+            if (n % i == 0) {
+                sum += i;
             }
-            if(choi==2){
-                System.exit(0);
+        }
+        return sum == n;
+    }
+
+    public static void main(String[] args) {
+        int n = 100;
+        System.out.println("Các số hoàn hảo từ 1 đến " + n + " là:");
+        for (int i = 1; i <= n; i++) {
+            if (kiemTra(i)) {
+                System.out.println(i);
             }
         }
     }
+
+
 }

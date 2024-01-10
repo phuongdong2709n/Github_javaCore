@@ -1,34 +1,24 @@
-package Lesson01;
+package demo;
 
 import java.util.Scanner;
 
 public class bai10 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        while (true){
-            System.out.println("Xin mời bạn hãy nhập màu");
-            char color = sc.next().charAt(0);
-            if(color=='R' || color=='r'){
-                System.out.println("Color = Red.");
-            }else if(color=='G' || color=='g'){
-                System.out.println("Color = Gree.");
-            }else if(color=='B' || color=='b'){
-                System.out.println("Color = Blue.");
-            }else{
-                System.out.println("Color = Black.");
+        System.out.println("nhap n= ");
+        int n=sc.nextInt();
+        int sum=0;
+        for(int i=1;i<n;i++){
+            if(n%i==0){
+                System.out.println(" " +i);
+                sum=sum+i;
             }
-
-            System.out.println("----------------------------------");
-            System.out.println("Bạn có muốn chơi nữa không ");
-            System.out.println("1.có");
-            System.out.println("2.không");
-            int choi=sc.nextInt();
-            if(choi==1){
-                continue;
-            }
-            if(choi==2){
-                System.exit(0);
-            }
+        }
+        System.out.println("tong các ước: " +sum);
+        if(sum==n){
+            System.out.println("đây la số hoàn hảo");
+        }else{
+            System.out.println("không phải là số hoàn hảo  ");
         }
     }
 }
