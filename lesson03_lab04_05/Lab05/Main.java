@@ -10,6 +10,7 @@ public class Main {
             System.out.println("xin mời lựa chọn.");
             System.out.println("1.nhập thông tin.");
             System.out.println("2.hiển thị thông tin.");
+            System.out.println("3.thoát.");
             int luaChon=sc.nextInt();
             switch (luaChon){
                 case 1:
@@ -18,6 +19,8 @@ public class Main {
                 case 2:
                     quanly.hienThiThongTin();
                     break;
+                case 3:
+                    quanly.thoat();
                 default:
                     System.out.println("chọn lại.");
                     break;

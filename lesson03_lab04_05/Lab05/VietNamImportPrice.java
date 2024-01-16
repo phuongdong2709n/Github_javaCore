@@ -36,7 +36,8 @@ public class VietNamImportPrice extends Product{
         this.sale_priceVN = sale_priceVN;
     }
     public void caculateSaleprice(){
-       this.sale_priceVN= (float) (this.import_price+(this.taxImported*this.import_price) + (0.1)*(this.import_price+(this.taxImported*this.import_price))
+       this.sale_priceVN= (float) (this.import_price+(this.taxImported*this.import_price)
+               + (0.1)*(this.import_price+(this.taxImported*this.import_price))
                       +(0.05)*this.import_price);
 
     }
