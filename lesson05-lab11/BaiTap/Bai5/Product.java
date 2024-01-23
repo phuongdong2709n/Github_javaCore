@@ -56,11 +56,11 @@ public class Product {
     }
     @Override
     public String toString() {
-        return "proId: " +proId
-                +"proName: "+proName
-                +"producer: " +producer
-                +"yearMaking: " +yearMaking
-                +"price: " +price
+        return "proId: " +proId +" \n"
+                + "proName: "+proName +" \n"
+                + "producer: " +producer +" \n"
+                + "yearMaking: " +yearMaking +" \n"
+                + "price: " +price
                 ;
     }
 
